@@ -1,0 +1,21 @@
+@import url('./styles.css');
+
+@media only screen and (max-width: 900px){
+    .screen {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .chuckRight, .chuckLeft {
+        transform: rotate(0);
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .screen {
+        line-height: 1rem;
+        font-size: var(--fs-200);
+        font-weight: 400;
+    }
+}

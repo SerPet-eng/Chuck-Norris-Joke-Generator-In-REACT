@@ -1,0 +1,15 @@
+@import url('./styles.css');
+
+.hero--button, .chuckRight, .chuckLeft {
+    transition: .3s ease-in;
+}
+
+.hero--button:hover {
+    background-color: var(--clr-seconday-600);
+    text-shadow: 0 5px 3px black;
+}
+
+.hero--button:active {
+    background-color: var(--clr-active-hover);
+    text-shadow: 0 1px 5px black;
+}
