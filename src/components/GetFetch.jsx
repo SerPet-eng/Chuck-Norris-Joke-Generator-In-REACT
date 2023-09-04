@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 
 function JokeGenerator() {
-    const [jokes, setJokes] = useState(['Welcome to Chuck Norris Joke Generator! Come on, have a little smile by reading and clicking the button below'])
+    const [jokes, setJokes] = useState(null)
     const [currentJokeIndex, setCurrentJokeIndex] = useState(0)
 
     const jokeURL = 'https://api.chucknorris.io/jokes/random'
@@ -24,7 +24,7 @@ function JokeGenerator() {
             }
         }
         fetchJoke()
-      }, [requestCount]);
+      }, [requestCount])
 
     const nextJoke = () => {
         if(requestCount < maxRequestPerHour) {
@@ -35,14 +35,16 @@ function JokeGenerator() {
         }
     }
 
-    setInterval( () => {
+    setInterval(() => {
         requestCount = 0
     }, requestInterval)
 
     return (
         <>
             <div className="screen" id="screen">
-                <div className="monitor" id="monitor">{jokes[currentJokeIndex]}</div>
+                <div className="monitor" id="monitor">
+                    {jokes ? jokes[currentJokeIndex] : 'Loading...'}
+                </div>
             </div>
             <button className="hero--button" id="hero--button" onClick={nextJoke}>Generate</button>  
         </>
