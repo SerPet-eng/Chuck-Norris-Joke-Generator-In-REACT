@@ -1,43 +1,30 @@
 import {useState, useEffect} from 'react'
+import { fetchData } from './units/fetchData'
 
 function JokeGenerator() {
     const [jokes, setJokes] = useState(null)
     const [currentJokeIndex, setCurrentJokeIndex] = useState(0)
 
     const jokeURL = 'https://api.chucknorris.io/jokes/random'
-    const maxRequestPerHour = 50
-    const requestInterval = 720000
+    const maxRequest = 20
     let requestCount = 0
 
     useEffect(() => {
         async function fetchJoke() {
-            try {
-                const responses = await Promise.all(Array.from({ 
-                    length: maxRequestPerHour },
-                    () => fetch(jokeURL))
-                )
-                const jsonData = await Promise.all(responses.map(response => response.json()))
-                setJokes(jsonData.map(data => data.value))
-
-            } catch (error) {
-                console.log(error)
-            }
+            const jokeData = await fetchData(jokeURL, maxRequest)
+            setJokes(jokeData)
         }
         fetchJoke()
       }, [requestCount])
 
     const nextJoke = () => {
-        if(requestCount < maxRequestPerHour) {
+        if(requestCount < maxRequest) {
             setCurrentJokeIndex(index => (index + 1) % jokes.length)
             requestCount++
         } else {
             console.log('Maximum number of request reached')
         }
     }
-
-    setInterval(() => {
-        requestCount = 0
-    }, requestInterval)
 
     return (
         <>
