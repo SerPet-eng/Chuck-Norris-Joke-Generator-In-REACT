@@ -1,7 +1,7 @@
 export default function SecondText() {
   return (
     <>
-      <h3>Second Text</h3>
+      <h3 className="second--sub-title">Here&apos;s Why...</h3>
       <p className="second--text">
         As a result of his &quot;tough guy&quot; image, an Internet phenomenon
         began in 2005 known as <strong>Chuck Norris facts</strong>, ascribing

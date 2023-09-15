@@ -24,7 +24,7 @@ export default function MainSection() {
         <ThirdText />
       </div>
       <div className="fourth--section">
-        <h1 className="fourth--title">When did it came from?</h1>
+        <h1 className="fourth--title">Where did it came from?</h1>
         <FourthText />
       </div>
       <div className="fifth--section">
