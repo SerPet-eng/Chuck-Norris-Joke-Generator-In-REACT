@@ -17,6 +17,13 @@ export default function MainSection() {
         <h1 className="second--title">
           How it became a <span>Thing?</span>
         </h1>
+        <iframe
+          src="https://giphy.com/embed/d2jfPv6CUzpopfLa"
+          width="480"
+          height="324"
+          className="giphy-embed"
+          allowFullScreen
+        ></iframe>
         <SecondText />
       </div>
       <div className="third--section">
