@@ -20,7 +20,7 @@ export default function FourthText() {
         members chose Chuck Norris to be the new subject
       </p>
 
-      <div>
+      <div className="fourth--video-section">
         <iframe
           width="521"
           height="391"
@@ -29,7 +29,7 @@ export default function FourthText() {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
         ></iframe>
-        <p className="fourth--text rightSide">
+        <p className="fourth--text margin-left">
           Conan O&apos;Brien&apos;s Chuck Norris jokes on Late Night with Conan
           O&apos;Brien &#40;which mostly revolve around Walker, Texas
           Ranger&#41; have been cited as inspiration for the craze. The
