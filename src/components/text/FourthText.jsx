@@ -22,8 +22,6 @@ export default function FourthText() {
 
       <div className="fourth--video-section">
         <iframe
-          width="521"
-          height="391"
           src="https://www.youtube.com/embed/XpIEyn9G6_8"
           title="Late Night &#39;The Walker Lever! (Whooo!) 7/20/05"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

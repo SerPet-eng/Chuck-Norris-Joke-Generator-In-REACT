@@ -237,9 +237,14 @@ body {
 }
 
 .fourth--video-section {
-  margin-top: 2rem;
-  align-items: center;
   display: flex;
+  align-items: center;
+  margin: 5rem;
+}
+
+.fourth--video-section iframe {
+  width: 50%;
+  min-height: 350px;
 }
 
 .fifth--video-container {
